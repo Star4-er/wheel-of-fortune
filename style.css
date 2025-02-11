@@ -178,7 +178,7 @@ select {
     top: 0;
     width: 55px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
     transform: scaleX(-1);
   }
@@ -190,7 +190,7 @@ select {
     transform: translateY(-50%);
     width: 55px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
   }
   .payment-methods {
@@ -212,7 +212,7 @@ select {
     filter: brightness(1.2);
   }
   .popup {
-    background: url("../images/popup-phone.png") no-repeat center/80%;
+    background: url("/wheel-of-fortune/images/popup-phone.png") no-repeat center/80%;
   }
   .popup-container h1 {
     font-family: "Anton", serif;
@@ -260,7 +260,7 @@ select {
     top: 0;
     width: 55px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
     transform: scaleX(-1);
   }
@@ -272,7 +272,7 @@ select {
     transform: translateY(-50%);
     width: 55px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
   }
 }
@@ -353,7 +353,7 @@ select {
     top: 0;
     width: 97px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
     transform: scaleX(-1);
   }
@@ -365,7 +365,7 @@ select {
     transform: translateY(-50%);
     width: 97px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
   }
   .payment-methods {
@@ -387,7 +387,7 @@ select {
     filter: brightness(1.2);
   }
   .popup {
-    background: url("../images/popup-tablet.png") no-repeat center/80%;
+    background: url("/wheel-of-fortune/images/popup-tablet.png") no-repeat center/80%;
   }
   .popup-container h1 {
     font-family: "Anton", serif;
@@ -434,7 +434,7 @@ select {
     top: 0;
     width: 100px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
     transform: scaleX(-1);
   }
@@ -446,7 +446,7 @@ select {
     transform: translateY(-50%);
     width: 100px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
   }
 }
@@ -528,7 +528,7 @@ select {
     top: 0;
     width: 100px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
     transform: scaleX(-1);
   }
@@ -540,7 +540,7 @@ select {
     transform: translateY(-50%);
     width: 100px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
   }
   .payment-methods {
@@ -567,7 +567,7 @@ select {
     filter: brightness(1.2);
   }
   .popup {
-    background: url("../images/popup-tablet.png") no-repeat center/80%;
+    background: url("/wheel-of-fortune/images/popup-tablet.png") no-repeat center/80%;
   }
 }
 
@@ -665,7 +665,7 @@ select {
     top: 0;
     width: 100px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
     transform: scaleX(-1);
   }
@@ -677,7 +677,7 @@ select {
     transform: translateY(-50%);
     width: 100px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
   }
   .payment-methods {
@@ -705,7 +705,7 @@ select {
     filter: brightness(1.2);
   }
   .popup {
-    background: url("../images/popup-pc.png") no-repeat center/80%;
+    background: url("/wheel-of-fortune/images/popup-pc.png") no-repeat center/80%;
   }
   .popup-container h1 {
     font-family: "Anton", serif;
@@ -756,7 +756,7 @@ select {
     top: 0;
     width: 100px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
     transform: scaleX(-1);
   }
@@ -768,7 +768,7 @@ select {
     transform: translateY(-50%);
     width: 100px;
     height: 100%;
-    background: url("../images/button-pattern3.png") no-repeat center;
+    background: url("/wheel-of-fortune/images/button-pattern3.png") no-repeat center;
     background-size: contain;
   }
 }
