@@ -107,20 +107,20 @@ function updateImages() {
   const lendingSection = document.querySelector(".lending");
 
   if (window.innerWidth < 767) {
-    lendingSection.style.backgroundImage = "url('/images/X - 32.jpg')";
-    document.querySelector(".svg-img-stone").src = "/images/stonephone.svg";
+    lendingSection.style.backgroundImage = "url('../images/phonebg.jpg')";
+    document.querySelector(".svg-img-stone").src = "../images/stonephone.svg";
   } else if (window.innerWidth < 968) {
-    lendingSection.style.backgroundImage = "url('/images/ipad.jpg')";
-    document.querySelector(".svg-img-stone").src = "/images/stoneipad2.svg";
+    lendingSection.style.backgroundImage = "url('../images/ipad.jpg')";
+    document.querySelector(".svg-img-stone").src = "../images/stoneipad2.svg";
   } else {
-    lendingSection.style.backgroundImage = "url('/images/PCbg.jpg')";
-    document.querySelector(".svg-img-stone").src = "/images/stonepc.svg";
+    lendingSection.style.backgroundImage = "url('../images/PCbg.jpg')";
+    document.querySelector(".svg-img-stone").src = "../images/stonepc.svg";
   }
 
   if (window.innerWidth < 767 || window.innerWidth < 968) {
-    document.querySelector(".png-img-wheel").src = "/images/wheel2.png";
+    document.querySelector(".png-img-wheel").src = "../images/wheel2.png";
   } else {
-    document.querySelector(".png-img-wheel").src = "/images/wheelpc.png";
+    document.querySelector(".png-img-wheel").src = "../images/wheelpc.png";
   }
 
 
