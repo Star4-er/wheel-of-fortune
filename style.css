@@ -1,0 +1,774 @@
+/* Базовые сбросы и общие стили */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+article > * + * {
+  margin-top: 1em;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.lending {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.trino {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.logo {
+  height: auto;
+}
+.girl,
+.major,
+.payment-methods-desktop {
+  display: none;
+}
+
+/* Общие правила для popup */
+.popup {
+  position: fixed;
+  top: -1000%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  transition: top 1s ease-in-out, background-color 1s ease-in-out;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0);
+}
+.popup.show {
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+/* MOBILE (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .lending {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 844px;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 2rem;
+    background-color: #333;
+    z-index: 1;
+  }
+  .trino {
+    top: 2%;
+  }
+  .logo {
+    max-width: 165px;
+  }
+  .stone {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  .wheel {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -28%;
+    left: 3px;
+    width: 90%;
+  }
+  .pointer {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    width: 100px;
+    transform: translate(-50%, -50%);
+  }
+  .spin-button {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    background: linear-gradient(to right, #f7a000, #f7a000);
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    width: 266px;
+    height: 51px;
+    margin: 0 auto;
+    top: 64%;
+  }
+  .spin-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 55px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+  }
+  .spin-button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+  }
+  .payment-methods {
+    position: absolute;
+    bottom: 33px;
+    text-align: center;
+  }
+  .payment-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 18px 0;
+  }
+  .payment-row img {
+    height: 30px;
+    max-width: 65px;
+    object-fit: contain;
+    filter: brightness(1.2);
+  }
+  .popup {
+    background: url("/images/popup-phone.png") no-repeat center/80%;
+  }
+  .popup-container h1 {
+    font-family: "Anton", serif;
+    font-weight: 400;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    font-size: 200%;
+    line-height: 52px;
+    color: #ffe500;
+  }
+  .popup-container h2 {
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 40px;
+    color: white;
+  }
+  .popup-container p {
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 30px;
+    color: #ffe500;
+    margin: 10px 60px;
+  }
+  .popup-container button {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    background: linear-gradient(to right, #f7a000, #f7a000);
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    width: 245px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  .popup-container button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 55px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+  }
+  .popup-container button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+  }
+}
+
+/* IPAD (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .lending {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 1333px;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 2rem;
+    background-color: #333;
+    z-index: 1;
+  }
+  .trino {
+    top: 0;
+  }
+  .logo {
+    width: 229px;
+  }
+  .stone {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  .wheel {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -18%;
+    width: 95%;
+  }
+  .pointer {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    width: 152px;
+    transform: translate(-50%, -50%);
+  }
+  .spin-button {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    background: linear-gradient(to right, #f7a000, #f7a000);
+    color: black;
+    font-size: 29px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    width: 469px;
+    height: 90px;
+    margin: 0 auto;
+    top: 67%;
+  }
+  .spin-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 97px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+  }
+  .spin-button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 97px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+  }
+  .payment-methods {
+    position: absolute;
+    bottom: 33px;
+    text-align: center;
+  }
+  .payment-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+    margin: 18px 0;
+  }
+  .payment-row img {
+    height: 62px;
+    max-width: 131px;
+    object-fit: contain;
+    filter: brightness(1.2);
+  }
+  .popup {
+    background: url("/images/popup-tablet.png") no-repeat center/80%;
+  }
+  .popup-container h1 {
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-size: 400%;
+    line-height: 92px;
+    margin-bottom: 20px;
+    color: #ffe500;
+  }
+  .popup-container h2 {
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 40px;
+    color: white;
+  }
+  .popup-container p {
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 60px;
+    color: #ffe500;
+    margin: 0 20%;
+  }
+  .popup-container button {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    background: linear-gradient(to right, #f7a000, #f7a000);
+    color: black;
+    font-size: 29px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    width: 469px;
+    height: 90px;
+    margin: 0 auto;
+  }
+  .popup-container button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+  }
+  .popup-container button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+  }
+}
+
+/* LAPTOP (min-width: 992px and max-width: 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .lending {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 1366px;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 2rem;
+    background-color: #333;
+    z-index: 1;
+  }
+  .trino {
+    top: 19px;
+  }
+  .logo {
+    width: 229px;
+  }
+  .stone {
+    position: absolute;
+    top: 50%;
+    left: 49.5%;
+    width: 1289px;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  .wheel {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    left: 4px;
+    max-width: 545px;
+  }
+  .pointer {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 175px;
+    transform: translate(-45%, -50%);
+  }
+  .spin-button {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    background: linear-gradient(to right, #f7a000, #f7a000);
+    color: black;
+    font-size: 29px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    width: 469px;
+    height: 90px;
+    margin: 0 auto;
+    top: 80%;
+  }
+  .spin-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+  }
+  .spin-button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+  }
+  .payment-methods {
+    display: none;
+  }
+  .payment-methods-desktop {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 33px;
+    text-align: center;
+  }
+  .payment-row-desk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 18px 0;
+  }
+  .payment-row-desk img {
+    height: 33px;
+    max-width: 119px;
+    object-fit: contain;
+    filter: brightness(1.2);
+  }
+  .popup {
+    background: url("/images/popup-tablet.png") no-repeat center/80%;
+  }
+}
+
+/* DESKTOP (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .lending {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 1080px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 2rem;
+    background-color: #333;
+    z-index: 1;
+  }
+  .trino {
+    top: 19px;
+  }
+  .logo {
+    width: 229px;
+  }
+  .stone {
+    position: absolute;
+    top: 50%;
+    left: 49.5%;
+    width: 60%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  .wheel {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    max-width: 31%;
+  }
+  .pointer {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    width: 10%;
+    transform: translate(-45%, -50%);
+  }
+  .girl {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 23%;
+    left: 0;
+    min-width: 28%;
+    max-width: 570px;
+  }
+  .major {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 6%;
+    right: 0;
+    min-width: 28%;
+    max-width: 588px;
+  }
+  .spin-button {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    background: linear-gradient(to right, #f7a000, #f7a000);
+    color: black;
+    font-size: 29px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    width: 469px;
+    height: 90px;
+    margin: 0 auto;
+    top: 83%;
+  }
+  .spin-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+  }
+  .spin-button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+  }
+  .payment-methods {
+    display: none;
+  }
+  .payment-methods-desktop {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+  }
+  .payment-row-desk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 18px 0;
+  }
+  .payment-row-desk img {
+    height: 40px;
+    max-width: 119px;
+    object-fit: contain;
+    filter: brightness(1.2);
+  }
+  .popup {
+    background: url("/images/popup-pc.png") no-repeat center/80%;
+  }
+  .popup-container h1 {
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 92px;
+    margin-bottom: 28px;
+    color: #ffe500;
+  }
+  .popup-container h2 {
+    font-family: "Anton", serif;
+    width: 615px;
+    height: 81px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 40px;
+    color: white;
+  }
+  .popup-container p {
+    font-family: "Anton", serif;
+    width: 615px;
+    height: 217px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 60px;
+    color: #ffe500;
+    margin: 0 20%;
+  }
+  .popup-container button {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    background: linear-gradient(to right, #f7a000, #f7a000);
+    color: black;
+    font-size: 29px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    width: 469px;
+    height: 90px;
+    margin: 0 auto;
+  }
+  .popup-container button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+  }
+  .popup-container button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100%;
+    background: url("/images/button-pattern3.png") no-repeat center;
+    background-size: contain;
+  }
+}
